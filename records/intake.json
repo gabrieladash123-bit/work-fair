@@ -1,0 +1,39 @@
+{
+  "jobs": [
+    {
+      "id": "amber-audit",
+      "tenant": "amber",
+      "specification": "Both independently produced inventory lists are supplied and permission is granted. Compare the two lists, investigate conflicting counts and produce a discrepancy report."
+    },
+    {
+      "id": "amber-copy",
+      "tenant": "amber",
+      "specification": "The supplied catalog is available and permission is granted. Retrieve and faithfully copy its existing address field with no calculation or modification."
+    },
+    {
+      "id": "cobalt-convert",
+      "tenant": "cobalt",
+      "specification": "The supplied temperature table is available and permission is granted. Convert its Celsius values into Fahrenheit and write the converted table; no independent source comparison is required."
+    },
+    {
+      "id": "cobalt-copy",
+      "tenant": "cobalt",
+      "specification": "The supplied manual is available and permission is granted. Retrieve and faithfully copy the existing maintenance interval without rewriting or calculation."
+    },
+    {
+      "id": "jade-copy",
+      "tenant": "jade",
+      "specification": "The supplied directory is available and permission is granted. Retrieve and faithfully copy its existing contact number without modification."
+    },
+    {
+      "id": "jade-pending",
+      "tenant": "jade",
+      "specification": "Compare independently produced bank statements and produce a discrepancy report. The second statement is missing and its required access permission is pending; these prerequisites must be supplied before work can start."
+    },
+    {
+      "id": "jade-unclear",
+      "tenant": "jade",
+      "specification": "Prepare the requested customer deliverable. The required operation and whether its prerequisites are available are unspecified."
+    }
+  ]
+}
