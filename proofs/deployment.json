@@ -1,0 +1,51 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0xb0b8f82B427f4dc296C0c58C0Ecf7311bA2804Ba",
+  "source_sha256": "0da3e6fbf5eb2be9d09f608ad2d0f2a07576360b34b1c7e128d223d95497d5b8",
+  "exact_source_match": true,
+  "fixture_revision": "32b560570c4baed3f2375403b9924c9ebdfc1ff8",
+  "sources": {
+    "intake": {
+      "url": "https://raw.githubusercontent.com/gabrieladash123-bit/work-fair/32b560570c4baed3f2375403b9924c9ebdfc1ff8/records/intake.json",
+      "sha256": "b9196f273e2d0233039c1763f088d409f6051705fced2537dc1e2903f6ca4bf8"
+    }
+  },
+  "transactions": [
+    {
+      "label": "pool-deploy",
+      "action": "deploy",
+      "hash": "0x2b5ba85833e510d522ede18fbd62d4c2833d1e6b8c17080005b7ce97ec431634"
+    },
+    {
+      "label": "intake",
+      "action": "enqueue",
+      "hash": "0x5c6d6b1770d5fbcc7ce05fc255eff67adb5d845d09715d28c101fbbe74435dbf"
+    },
+    {
+      "label": "round1",
+      "action": "advance",
+      "hash": "0xd7bd7f7d54113337e1bba5c42e9f92a0824497650cbfeece961c1950617c13d8"
+    },
+    {
+      "label": "round2",
+      "action": "advance",
+      "hash": "0x433552ef184f98166d217385dbd6774feb95ac12e840cb25291f6a09df1df848"
+    },
+    {
+      "label": "round3",
+      "action": "advance",
+      "hash": "0xd7f7906bd37c87bc51257db28c80aa383d42bbda434d82ce3f74699cb36a96b2"
+    },
+    {
+      "label": "round4",
+      "action": "advance",
+      "hash": "0x61b80b235e43262719c3611fda5b67b8842b9ef7a975ffe2b9574c3bb80cd18a"
+    },
+    {
+      "label": "round5",
+      "action": "advance",
+      "hash": "0x60dbe1a9528aef2017564d38c98fb75d258a80d7c3ce381aee78dbeb7f32225b"
+    }
+  ]
+}

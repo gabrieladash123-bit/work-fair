@@ -1,0 +1,185 @@
+{
+  "hash": "0x5c6d6b1770d5fbcc7ce05fc255eff67adb5d845d09715d28c101fbbe74435dbf",
+  "from_address": "0xf9dCA96B84Ba9088C644f79A5283d2D47Da716d2",
+  "to_address": "0xb0b8f82B427f4dc296C0c58C0Ecf7311bA2804Ba",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/work-fair/32b560570c4baed3f2375403b9924c9ebdfc1ff8/records/intake.json\",\"b9196f273e2d0233039c1763f088d409f6051705fced2537dc1e2903f6ca4bf8\",]\"method\":\"enqueue\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "disagree",
+      "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "idle",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+      "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/work-fair/32b560570c4baed3f2375403b9924c9ebdfc1ff8/records/intake.json\",\"b9196f273e2d0233039c1763f088d409f6051705fced2537dc1e2903f6ca4bf8\",]\"method\":\"enqueue\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"record\":{\"jobs\":[{\"id\":\"amber-audit\"\"specification\":\"Both independently produced inventory lists are supplied and permission is granted. Compare the two lists, investigate conflicting counts and produce a discrepancy report.\"\"tenant\":\"amber\"},{\"id\":\"amber-copy\"\"specification\":\"The supplied catalog is available and permission is granted. Retrieve and faithfully copy its existing address field with no calculation or modification.\"\"tenant\":\"amber\"},{\"id\":\"cobalt-convert\"\"specification\":\"The supplied temperature table is available and permission is granted. Convert its Celsius values into Fahrenheit and write the converted table; no independent source comparison is required.\"\"tenant\":\"cobalt\"},{\"id\":\"cobalt-copy\"\"specification\":\"The supplied manual is available and permission is granted. Retrieve and faithfully copy the existing maintenance interval without rewriting or calculation.\"\"tenant\":\"cobalt\"},{\"id\":\"jade-copy\"\"specification\":\"The supplied directory is available and permission is granted. Retrieve and faithfully copy its existing contact number without modification.\"\"tenant\":\"jade\"},{\"id\":\"jade-pending\"\"specification\":\"Compare independently produced bank statements and produce a discrepancy report. The second statement is missing and its required access permission is pending; these prerequisites must be supplied before work can start.\"\"tenant\":\"jade\"},{\"id\":\"jade-unclear\"\"specification\":\"Prepare the requested customer deliverable. The required operation and whether its prerequisites are available are unspecified.\"\"tenant\":\"jade\"},]}\"report\":{\"jobs\":[{\"class\":\"CROSSCHECK\"\"id\":\"amber-audit\"\"quote\":\"Both independently produced inventory lists are supplied and permission is granted. Compare the two lists, investigate conflicting counts and produce a discrepancy report.\"},{\"class\":\"LOOKUP\"\"id\":\"amber-copy\"\"quote\":\"The supplied catalog is available and permission is granted. Retrieve and faithfully copy its existing address field with no calculation or modification.\"},{\"class\":\"TRANSFORM\"\"id\":\"cobalt-convert\"\"quote\":\"The supplied temperature table is available and permission is granted. Convert its Celsius values into Fahrenheit and write the converted table\"},{\"class\":\"LOOKUP\"\"id\":\"cobalt-copy\"\"quote\":\"The supplied manual is available and permission is granted. Retrieve and faithfully copy the existing maintenance interval without rewriting or calculation.\"},{\"class\":\"LOOKUP\"\"id\":\"jade-copy\"\"quote\":\"The supplied directory is available and permission is granted. Retrieve and faithfully copy its existing contact number without modification.\"},{\"class\":\"BLOCKED\"\"id\":\"jade-pending\"\"quote\":\"The second statement is missing and its required access permission is pending; these prerequisites must be supplied before work can start.\"},{\"class\":\"UNKNOWN\"\"id\":\"jade-unclear\"\"quote\":\"The required operation and whether its prerequisites are available are unspecified.\"},]}}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/gabrieladash123-bit/work-fair/32b560570c4baed3f2375403b9924c9ebdfc1ff8/records/intake.json\",\"b9196f273e2d0233039c1763f088d409f6051705fced2537dc1e2903f6ca4bf8\",]\"method\":\"enqueue\"}"
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      }
+    ]
+  },
+  "gaslimit": 1,
+  "nonce": 1,
+  "created_at": "2026-10-08T05:52:01.712473+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0xf9dCA96B84Ba9088C644f79A5283d2D47Da716d2",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9020901808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901a427241a99000000000000000000000000f9dca96b84ba9088c644f79a5283d2d47da716d2000000000000000000000000b0b8f82b427f4dc296c0c58c0ecf7311ba2804ba0000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000dbf8d9b8d616046172677315e40768747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6761627269656c61646173683132332d6269742f776f726b2d666169722f333262353630353730633462616564336632333735343033623939323463396562646663316666382f7265636f7264732f696e74616b652e6a736f6e840462393139366632373365326430323333303339633137363366303838643430396636303531373035666365643235333764633165323930336636636134626638066d6574686f643c656e71756575650000000000008301e482a01be48f3f21e27678ec05fe5abc93b00672f03adbfd3301f418a30684c1a7c22ba0166c4c27850c5aed505985b67dadf9520397c8f16aa8dded79f0f415270b1e95"
+  },
+  "value_credited": false,
+  "sender": "0xf9dCA96B84Ba9088C644f79A5283d2D47Da716d2",
+  "recipient": "0xb0b8f82B427f4dc296C0c58C0Ecf7311bA2804Ba",
+  "tx_id": "0x5c6d6b1770d5fbcc7ce05fc255eff67adb5d845d09715d28c101fbbe74435dbf",
+  "activator": "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11",
+  "last_leader": "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11",
+      "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88",
+      "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb",
+      "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47"
+    ],
+    "validator_votes_hash": [
+      "0x3f4e69ef4f69f74552bfb3c556c1aed3623ed9b24b8cc5dbed442a347bdfebe2",
+      "0xd2b06cbbd8cd1c5afff3cda38bf91b3b27d0417d10f8bf97856e7ad7bda7c701",
+      "0x120c4470460da607a66d1eb385e4f98520c732b1f51d8ffc0defbdc651712573",
+      "0xb0d83e6d7dd853557c01d889962d428e81e5bea11bd4c2b746989bac6aab66d8",
+      "0xce3ca9342fffd7c90d0cb497ea77e7569243881870f05e697aac8c64ebdbde5c"
+    ],
+    "validator_votes": [
+      2,
+      1,
+      5,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "DISAGREE",
+      "AGREE",
+      "IDLE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

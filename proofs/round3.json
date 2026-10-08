@@ -1,0 +1,261 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0xb0b8f82B427f4dc296C0c58C0Ecf7311bA2804Ba",
+  "source_sha256": "0da3e6fbf5eb2be9d09f608ad2d0f2a07576360b34b1c7e128d223d95497d5b8",
+  "fixture_revision": "32b560570c4baed3f2375403b9924c9ebdfc1ff8",
+  "transaction": {
+    "label": "round3",
+    "action": "advance",
+    "hash": "0xd7f7906bd37c87bc51257db28c80aa383d42bbda434d82ce3f74699cb36a96b2"
+  },
+  "state": {
+    "batches": [
+      {
+        "record": {
+          "jobs": [
+            {
+              "id": "amber-audit",
+              "specification": "Both independently produced inventory lists are supplied and permission is granted. Compare the two lists, investigate conflicting counts and produce a discrepancy report.",
+              "tenant": "amber"
+            },
+            {
+              "id": "amber-copy",
+              "specification": "The supplied catalog is available and permission is granted. Retrieve and faithfully copy its existing address field with no calculation or modification.",
+              "tenant": "amber"
+            },
+            {
+              "id": "cobalt-convert",
+              "specification": "The supplied temperature table is available and permission is granted. Convert its Celsius values into Fahrenheit and write the converted table; no independent source comparison is required.",
+              "tenant": "cobalt"
+            },
+            {
+              "id": "cobalt-copy",
+              "specification": "The supplied manual is available and permission is granted. Retrieve and faithfully copy the existing maintenance interval without rewriting or calculation.",
+              "tenant": "cobalt"
+            },
+            {
+              "id": "jade-copy",
+              "specification": "The supplied directory is available and permission is granted. Retrieve and faithfully copy its existing contact number without modification.",
+              "tenant": "jade"
+            },
+            {
+              "id": "jade-pending",
+              "specification": "Compare independently produced bank statements and produce a discrepancy report. The second statement is missing and its required access permission is pending; these prerequisites must be supplied before work can start.",
+              "tenant": "jade"
+            },
+            {
+              "id": "jade-unclear",
+              "specification": "Prepare the requested customer deliverable. The required operation and whether its prerequisites are available are unspecified.",
+              "tenant": "jade"
+            }
+          ]
+        },
+        "report": {
+          "jobs": [
+            {
+              "class": "CROSSCHECK",
+              "id": "amber-audit",
+              "quote": "Both independently produced inventory lists are supplied and permission is granted. Compare the two lists, investigate conflicting counts and produce a discrepancy report."
+            },
+            {
+              "class": "LOOKUP",
+              "id": "amber-copy",
+              "quote": "The supplied catalog is available and permission is granted. Retrieve and faithfully copy its existing address field with no calculation or modification."
+            },
+            {
+              "class": "TRANSFORM",
+              "id": "cobalt-convert",
+              "quote": "The supplied temperature table is available and permission is granted. Convert its Celsius values into Fahrenheit and write the converted table"
+            },
+            {
+              "class": "LOOKUP",
+              "id": "cobalt-copy",
+              "quote": "The supplied manual is available and permission is granted. Retrieve and faithfully copy the existing maintenance interval without rewriting or calculation."
+            },
+            {
+              "class": "LOOKUP",
+              "id": "jade-copy",
+              "quote": "The supplied directory is available and permission is granted. Retrieve and faithfully copy its existing contact number without modification."
+            },
+            {
+              "class": "BLOCKED",
+              "id": "jade-pending",
+              "quote": "The second statement is missing and its required access permission is pending; these prerequisites must be supplied before work can start."
+            },
+            {
+              "class": "UNKNOWN",
+              "id": "jade-unclear",
+              "quote": "The required operation and whether its prerequisites are available are unspecified."
+            }
+          ]
+        },
+        "sha256": "b9196f273e2d0233039c1763f088d409f6051705fced2537dc1e2903f6ca4bf8",
+        "url": "https://raw.githubusercontent.com/gabrieladash123-bit/work-fair/32b560570c4baed3f2375403b9924c9ebdfc1ff8/records/intake.json"
+      }
+    ],
+    "cursor": 0,
+    "deficits": {
+      "amber": 3,
+      "cobalt": 0,
+      "jade": 0
+    },
+    "queues": {
+      "amber": [
+        {
+          "batch": 0,
+          "class": "CROSSCHECK",
+          "cost": 4,
+          "id": "amber-audit",
+          "tenant": "amber"
+        },
+        {
+          "batch": 0,
+          "class": "LOOKUP",
+          "cost": 1,
+          "id": "amber-copy",
+          "tenant": "amber"
+        }
+      ],
+      "cobalt": [],
+      "jade": []
+    },
+    "rounds": [
+      {
+        "admitted": [
+          {
+            "batch": 0,
+            "class": "TRANSFORM",
+            "cost": 2,
+            "id": "cobalt-convert",
+            "tenant": "cobalt"
+          },
+          {
+            "batch": 0,
+            "class": "LOOKUP",
+            "cost": 1,
+            "id": "jade-copy",
+            "tenant": "jade"
+          }
+        ],
+        "number": 1,
+        "spent": 3,
+        "visits": [
+          {
+            "after": 1,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 1,
+            "spent": 0,
+            "tenant": "amber"
+          },
+          {
+            "after": 0,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 2,
+            "spent": 2,
+            "tenant": "cobalt"
+          },
+          {
+            "after": 0,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 1,
+            "spent": 1,
+            "tenant": "jade"
+          }
+        ]
+      },
+      {
+        "admitted": [
+          {
+            "batch": 0,
+            "class": "LOOKUP",
+            "cost": 1,
+            "id": "cobalt-copy",
+            "tenant": "cobalt"
+          }
+        ],
+        "number": 2,
+        "spent": 1,
+        "visits": [
+          {
+            "after": 0,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 1,
+            "grant": 2,
+            "spent": 1,
+            "tenant": "cobalt"
+          },
+          {
+            "after": 0,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 0,
+            "spent": 0,
+            "tenant": "jade"
+          },
+          {
+            "after": 2,
+            "before": 1,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 1,
+            "spent": 0,
+            "tenant": "amber"
+          }
+        ]
+      },
+      {
+        "admitted": [],
+        "number": 3,
+        "spent": 0,
+        "visits": [
+          {
+            "after": 0,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 0,
+            "spent": 0,
+            "tenant": "jade"
+          },
+          {
+            "after": 3,
+            "before": 2,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 1,
+            "spent": 0,
+            "tenant": "amber"
+          },
+          {
+            "after": 0,
+            "before": 0,
+            "clipped": 0,
+            "discarded": 0,
+            "grant": 0,
+            "spent": 0,
+            "tenant": "cobalt"
+          }
+        ]
+      }
+    ],
+    "seen": [
+      "amber-audit",
+      "amber-copy",
+      "cobalt-convert",
+      "cobalt-copy",
+      "jade-copy",
+      "jade-pending",
+      "jade-unclear"
+    ],
+    "source_repository": "gabrieladash123-bit/work-fair"
+  }
+}

@@ -17,9 +17,16 @@ for(const tx of m.transactions){
   assert.equal(r.statusName||r.status_name,'FINALIZED');assert.equal(r.result_name,'MAJORITY_AGREE');
   assert.ok(['SUCCESS','FINISHED_WITH_RETURN'].includes(r.txExecutionResultName||r.consensus_data?.leader_receipt?.[0]?.execution_result));
   assert.equal((r.hash||r.transactionHash||r.transaction_hash).toLowerCase(),tx.hash.toLowerCase());
+  assert.ok(Object.values(r.consensus_data.votes).filter(v=>v==='agree').length>=3);
+  if(tx.action!=='deploy')assert.equal(r.to_address.toLowerCase(),m.contract_address.toLowerCase());
 }
 const intake=read('intake');
 assert.equal(intake.contract_address,m.contract_address);
+assert.equal(intake.source_sha256,m.source_sha256);
+assert.equal(intake.transaction.hash,m.transactions[1].hash);
+assert.equal(intake.state.source_repository,'gabrieladash123-bit/work-fair');
+assert.ok(read('intake-receipt').data.calldata.readable.includes(m.sources.intake.url));
+assert.ok(read('intake-receipt').data.calldata.readable.includes(m.sources.intake.sha256));
 same(intake.state.batches[0].record,record);
 same(intake.state.batches[0].report.jobs.map(j=>j.class),['CROSSCHECK','LOOKUP','TRANSFORM','LOOKUP','LOOKUP','BLOCKED','UNKNOWN']);
 assert.equal(intake.state.batches[0].url,m.sources.intake.url);
@@ -35,6 +42,8 @@ for(let index=0;index<5;index++){
   const proof=read('round'+(index+1)),state=proof.state,r=state.rounds.at(-1);
   assert.equal(proof.transaction.hash,m.transactions[index+2].hash);
   assert.equal(proof.contract_address,m.contract_address);same(state.batches,intake.state.batches);
+  assert.equal(proof.source_sha256,m.source_sha256);same(state.seen,intake.state.seen);
+  if(index) same(state.rounds.slice(0,-1),read('round'+index).state.rounds);
   assert.equal(state.rounds.length,index+1);assert.equal(r.number,index+1);
   let left=8,issued=[];
   for(let visit=0;visit<3;visit++){
